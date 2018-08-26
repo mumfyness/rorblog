@@ -1,0 +1,24 @@
+<h1>Your Venues</h1>
+<div>
+  <p><%= link_to 'Add Venue', new_venue_path %><p/>
+</div>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th></th>
+  </tr>
+
+  <% @venues.each do |venue| %>
+    <tr>
+      <td><%= venue.name %></td>
+      <td><%= venue.address %></td>
+      <td><%= venue.phone %></td>
+      <td><%= link_to 'Show', venue_path(venue) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', welcome_index_url %>
