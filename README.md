@@ -32,6 +32,11 @@ This project is in progress.
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+If you download or clone this project you must first run this ruby command to set up the 
+development database:
+
+ruby bin/rails db:migrate RAILS_ENV=development
+
 I created the run.bat file to quickly run the development server.
 I leave this running while I am developing the service.
 Of course it just contains the following ruby command:
