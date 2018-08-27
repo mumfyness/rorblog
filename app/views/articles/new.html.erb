@@ -1,5 +1,7 @@
-<h1>New Review</h1>
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
+  New Review
+</h1>
+  <%= form_with scope: :article, url: articles_path, local: true do |form| %>
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -15,19 +17,25 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+  <div style="background-color: moccasin;  margin:0;">
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text %>
+    </p>
 
-  <p>
-    <%= form.submit %>
-  </p>
+    <p>
+      <%= form.submit %>
+    </p>
+
+    <%= link_to 'Back', articles_path %>
+  </div>
 <% end %>
 
-<%= link_to 'Back', articles_path %>
+<div style="background-color:black; ">
+  <img src="<%= asset_path 'LT Wedding/Just Married' %>" align="center" width="100%" >
+</div>
