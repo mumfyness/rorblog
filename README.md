@@ -32,6 +32,13 @@ This project is in progress.
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+I created the run.bat file to quickly run the development server.
+I leave this running while I am developing the service.
+Of course it just contains the following ruby command:
+
+ruby bin\rails server
+
+
 * Ruby version  started with 2.5.1 and reverted to 2.4.4
 * System dependencies  building and using Ruby on Rails in Windows 8.1
 
