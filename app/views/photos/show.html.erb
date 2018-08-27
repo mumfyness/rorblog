@@ -1,18 +1,28 @@
-<h1>Wedding Photos</h1>
-<br/>
-<p>
-  <strong>Wedding:</strong>
-  <% @photo.wedding %>
-</p>
+<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
+  Wedding Photos
+</h1>
+<div style="width:100%; margin:0; background-color: moccasin; color: navy;">
+  <p>
+    <strong>Wedding:</strong>
+    <% @photo.wedding %>
+  </p>
 
-<p>
-  <strong>Photographer:</strong>
-  <%= @photo.photographer %>
-</p>
+  <p>
+    <strong>Photographer:</strong>
+    <%= @photo.photographer %>
+  </p>
 
-<p>
-  <strong>Image:</strong> <!-- TOTO Show Images of Weddings -->
-  <%= @photo.image %>
-</p>
+  <p>
+    <strong>Image:</strong> <!-- TOTO Show Images of Weddings -->
+    <%= @photo.image %>
+  </p>
 
-<%= link_to 'Back', photos_path %>
+  <%= link_to 'Back', photos_path %>
+</div>
+<div style="background-color:black; ">
+  <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+  <!-- TODO fix loading of photographers images
+  <img src="<%= @photo.image %>" align="center" width="100%" >
+  -->
+</div>
+
