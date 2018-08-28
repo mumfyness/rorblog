@@ -1,6 +1,7 @@
 <h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
-  New Review
+  Add your Review
 </h1>
+
   <%= form_with scope: :article, url: articles_path, local: true do |form| %>
 
   <% if @article.errors.any? %>
@@ -19,12 +20,12 @@
 
   <div style="background-color: moccasin;  margin:0;">
     <p>
-      <%= form.label :title %><br>
+      <%= form.label :wedding %><br>
       <%= form.text_field :title %>
     </p>
 
     <p>
-      <%= form.label :text %><br>
+      <%= form.label :review %><br>
       <%= form.text_area :text %>
     </p>
 
