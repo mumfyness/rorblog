@@ -12,10 +12,10 @@ class VenuesController < ApplicationController
   end
 
   def create
-    @venue = Venue.new(params.require(:venue).permit(:name, :address, :phone))
+    @venue = Venue.new(venue_params)
 
     if @venue.save
-      redirect_to @venue
+#      redirect_to @venue
     else
       render 'new'
     end

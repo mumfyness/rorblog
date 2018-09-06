@@ -12,10 +12,10 @@ class PhotographersController < ApplicationController
   end
 
   def create
-    @photographer = Photographer.new(params.require(:photographer).permit(:name, :address, :phone))
+    @photographer = Photographer.new(photographer_params)
 
     if @photographer.save
-      redirect_to @photographer
+#      redirect_to @photographer
     else
       render 'new'
     end

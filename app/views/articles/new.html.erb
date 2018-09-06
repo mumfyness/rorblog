@@ -1,42 +1,45 @@
-<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
-  Add your Review
-</h1>
+<div class="view">
+  <h1>Add your Review</h1>
 
-  <%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <div class="formdiv">
+    <%= form_with scope: :article, url: articles_path, local: true do |form| %>
 
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <% if @article.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@article.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @article.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div style="background-color: moccasin;  margin:0;">
-    <p>
-      <%= form.label :wedding %><br>
-      <%= form.text_field :title %>
-    </p>
+      <div class="entrydiv">
+        <p>
+          <%= form.label :wedding %><br>
+          <%= form.text_field :title %>
+        </p>
 
-    <p>
-      <%= form.label :review %><br>
-      <%= form.text_area :text %>
-    </p>
+        <p>
+          <%= form.label :review %><br>
+          <%= form.text_area :text %>
+        </p>
 
-    <p>
-      <%= form.submit %>
-    </p>
+        <p>
+          <%= form.submit %>
+        </p>
+      </div>
 
-    <%= link_to 'Back', articles_path %>
+    <% end %>
   </div>
-<% end %>
 
-<div style="background-color:black; ">
-  <img src="<%= asset_path 'LT Wedding/Just Married' %>" align="center" width="100%" >
+  <%= link_to 'Back', articles_path %>
+
+  <div class="pnotodiv">
+    <img src="<%= asset_path 'LT Wedding/Just Married' %>" align="center" width="100%" >
+  </div>
 </div>

@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(params.require(:photo).permit(:wedding, :photographer, :image))
+    @photo = Photo.new(photo_params)
 
     if @photo.save
       redirect_to @photo

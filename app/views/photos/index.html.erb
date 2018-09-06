@@ -1,29 +1,31 @@
-<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
-  Wedding Photos
-</h1>
-<div style="width:100%; margin:0; background-color: moccasin; color: navy;">
+<div class="view">
+  <h1>Wedding Photos</h1>
 
-  <p><%= link_to 'Upload Photo', new_photo_path %><p/>
+  <div class="tablediv">
 
-  <table>
-    <tr>
-      <th>Wedding</th>
-      <th>Photographer</th>
-      <th>Image</th>
-      <th></th>
-    </tr>
+    <p><%= link_to 'Upload Photo', new_photo_path %><p/>
 
-    <% @photos.each do |photo| %>
+    <table>
       <tr>
-        <td><%= photo.wedding %></td>
-        <td><%= photo.photographer %></td>
-        <td><%= photo.image %></td>
-        <td><%= link_to 'Show', photo_path(photo) %></td>
+        <th>Wedding</th>
+        <th>Photographer</th>
+        <th>Image</th>
+        <th></th>
       </tr>
-    <% end %>
-  </table>
-  <%= link_to 'Back', welcome_index_url %>
-</div>
-<div style="background-color:black; ">
-  <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+
+      <% @photos.each do |photo| %>
+        <tr>
+          <td><%= photo.wedding %></td>
+          <td><%= photo.photographer %></td>
+          <td><%= photo.image %></td>
+          <td><%= link_to 'Show', photo_path(photo) %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <%= link_to 'Back', welcome_index_url %>
+  </div>
+  <div class="photodiv">
+    <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+  </div>
 </div>

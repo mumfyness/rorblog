@@ -1,7 +1,6 @@
-<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
-  Wedding Photos
-</h1>
-<div style="width:100%; margin:0; background-color: moccasin; color: navy;">
+<div class="view">
+  <h1>Wedding Photos</h1>
+
   <p>
     <strong>Wedding:</strong>
     <% @photo.wedding %>
@@ -18,11 +17,12 @@
   </p>
 
   <%= link_to 'Back', photos_path %>
-</div>
-<div style="background-color:black; ">
-  <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
-  <!-- TODO fix loading of photographers images
-  <img src="<%= @photo.image %>" align="center" width="100%" >
-  -->
+
+  <div class="photodiv">
+    <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+    <!-- TODO fix loading of photographers images
+    <img src="<%= @photo.image %>" align="center" width="100%" >
+    -->
+  </div>
 </div>
 

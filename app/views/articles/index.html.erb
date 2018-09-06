@@ -1,27 +1,30 @@
-<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
-  Photographer reviews
-</h1>
-<div style="width:100%; margin:0; background-color: moccasin; color: navy;">
-  <p><%= link_to 'Add Review', new_article_path %><p/>
+<div class="view">
+  <h1>Photographer reviews</h1>
 
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th></th>
-    </tr>
+  <div class="tablediv">
 
-    <% @articles.each do |article| %>
+    <p><%= link_to 'Add Review', new_article_path %><p/>
+
+    <table>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
+        <th>Title</th>
+        <th>Text</th>
+        <th></th>
       </tr>
-    <% end %>
-  </table>
 
-  <%= link_to 'Back', welcome_index_url %>
-</div>
-<div style="background-color:black; ">
-  <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
+          <td><%= link_to 'Show', article_path(article) %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <%= link_to 'Back', welcome_index_url %>
+
+  </div>
+  <div class="photodiv">
+    <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+  </div>
 </div>

@@ -1,24 +1,29 @@
-<h1>Your Photographers</h1>
-<div>
-  <p><%= link_to 'Add Photographer', new_photographer_path %><p/>
+<div class="view">
+  <h1>Your Photographers</h1>
+
+  <div class="tablediv">
+
+    <p><%= link_to 'Add Photographer', new_photographer_path %><p/>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th></th>
+      </tr>
+
+      <% @photographers.each do |photographer| %>
+        <tr>
+          <td><%= photographer.name %></td>
+          <td><%= photographer.address %></td>
+          <td><%= photographer.phone %></td>
+          <td><!--= TODO  fix this @ link_to 'Show', photographer_path(photographer) %-->Show</td>
+        </tr>
+      <% end %>
+    </table>
+
+    <%= link_to 'Back', welcome_index_url %>
+  </div>
+
 </div>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Phone</th>
-    <th></th>
-  </tr>
-
-  <% @photographers.each do |photographer| %>
-    <tr>
-      <td><%= photographer.name %></td>
-      <td><%= photographer.address %></td>
-      <td><%= photographer.phone %></td>
-      <td><%= link_to 'Show', photographer_path(photographer) %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to 'Back', welcome_index_url %>

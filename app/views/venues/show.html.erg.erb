@@ -1,19 +1,25 @@
-<h1>Wedding Venue</h1>
-<br/>
-<p>
-  <strong>Name:</strong>
-  <%= @venue.name %>
-</p>
+<div class="view">
+  <h1>Wedding Venue</h1>
 
-<p>
-  <strong>Address:</strong>
-  <%= @venue.address %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @venue.name %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @venue.phone %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @venue.address %>
+  </p>
 
-<%= link_to 'Back', venues_path %>
+  <p>
+    <strong>Phone:</strong>
+    <%= @venue.phone %>
+  </p>
+
+  <%= link_to 'Back', venues_path %>
+
+  <div class="photodiv">
+    <!-- photo or map of location -->
+  </div>
+</div>
 

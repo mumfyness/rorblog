@@ -1,19 +1,19 @@
-<h1 style="width:100%; margin:0; background-color: navy; color: white; height:2em">
-  Photographer Review
-</h1>
-<div style="width:100%; margin:0; background-color: moccasin; color: navy;">
-  <p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-  </p>
+<div class="view">
+  <h1>Photographer Review</h1>
 
-  <p>
-    <strong>Text:</strong>
-    <%= @article.text %>
-  </p>
+    <p>
+      <strong>Title:</strong>
+      <%= @article.title %>
+    </p>
 
-  <%= link_to 'Back', articles_path %>
-</div>
-<div style="background-color:black; ">
-  <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+    <p>
+      <strong>Text:</strong>
+      <%= @article.text %>
+    </p>
+
+    <%= link_to 'Back', articles_path %>
+
+  <div class="photodiv">
+    <img src="<%= asset_path 'LightedCenterPiece.jpg' %>" align="center" width="100%" >
+  </div>
 </div>
