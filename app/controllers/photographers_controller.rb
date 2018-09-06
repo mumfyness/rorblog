@@ -15,7 +15,7 @@ class PhotographersController < ApplicationController
     @photographer = Photographer.new(photographer_params)
 
     if @photographer.save
-#      redirect_to @photographer
+      redirect_to @photographer
     else
       render 'new'
     end

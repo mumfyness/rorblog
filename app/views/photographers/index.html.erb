@@ -18,7 +18,7 @@
           <td><%= photographer.name %></td>
           <td><%= photographer.address %></td>
           <td><%= photographer.phone %></td>
-          <td><!--= TODO  fix this @ link_to 'Show', photographer_path(photographer) %-->Show</td>
+          <td><%= link_to 'Show', photographer_path(photographer) %></td>
         </tr>
       <% end %>
     </table>
